@@ -23,7 +23,7 @@ function UserWidget({userId, picturePath}){
   const main = palette.neutral.main;
 
   async function getUser(){
-    const response = await fetch(`http://localhost:3000/users/${userId}`, { method: "GET", headers: { Authorization: `Bearer ${token}` },});
+    const response = await fetch(`https://kamarites.onrender.com/users/${userId}`, { method: "GET", headers: { Authorization: `Bearer ${token}` },});
     const data = await response.json();
     setUser(data);
   };

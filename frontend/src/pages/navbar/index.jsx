@@ -32,7 +32,7 @@ function Navbar(){
 
   async function handlSearch(){
     if(searchItem === "") {setIsSearch(false); return}
-    const request = await fetch(`http://localhost:3000/search?searchedItem=${searchItem}`, {
+    const request = await fetch(`https://kamarites.onrender.com/search?searchedItem=${searchItem}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

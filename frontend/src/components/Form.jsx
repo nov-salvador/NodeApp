@@ -58,7 +58,7 @@ function Form(){
     }
     formData.append("picturePath", values.picture.name);
     try{
-      const savedUserResponse = await fetch("http://localhost:3000/auth/register", {method: "POST", body: formData});
+      const savedUserResponse = await fetch("https://kamarites.onrender.com/auth/register", {method: "POST", body: formData});
       const savedUser = await savedUserResponse.json();
       onSubmitProps.resetForm();
 
@@ -72,7 +72,7 @@ function Form(){
 
   async function login(values, onSubmitProps){
     try{
-      const loggedInResponse = await fetch("http://localhost:3000/auth/login", {method: "POST", body: JSON.stringify(values), headers:{"Content-Type":"application/json"}});
+      const loggedInResponse = await fetch("https://kamarites.onrender.com/auth/login", {method: "POST", body: JSON.stringify(values), headers:{"Content-Type":"application/json"}});
       const loggedIn = await loggedInResponse.json();
       
       onSubmitProps.resetForm();
